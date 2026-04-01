@@ -29,3 +29,9 @@ functions:
   scrape:
     handler: src/handlers/index.handler
     url: true
+    # You can uncomment the events section if you want to trigger the function via an HTTP POST request to /scrape
+    
+    # events: 
+    #   - http:
+    #       method: POST
+    #       path: /scrape
