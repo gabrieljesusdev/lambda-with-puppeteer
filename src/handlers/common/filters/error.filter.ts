@@ -8,5 +8,8 @@ export const ErrorFilter = (error: unknown) => {
     return http.reply(400, { error: error.message, code: error.code });
   }
 
-  return http.reply(500, { error: "An unexpected error occurred" });
+  return http.reply(500, {
+    error: "An unexpected error occurred",
+    code: "INTERNAL_SERVER_ERROR",
+  });
 };

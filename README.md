@@ -99,7 +99,8 @@ Error response examples:
 
 ```json
 {
-	"error": "An unexpected error occurred"
+	"error": "An unexpected error occurred",
+  "code": "INTERNAL_SERVER_ERROR"
 }
 ```
 
