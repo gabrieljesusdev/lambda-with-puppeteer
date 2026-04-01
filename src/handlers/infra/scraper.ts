@@ -11,16 +11,16 @@ import {
 export class Scraper {
   public browser: Promise<Browser> | null = null;
 
-  getBrowser(): Promise<Browser> {
+  async getBrowser(): Promise<Browser> {
     if (!this.browser) {
-      this.browser = chromium.executablePath().then((executablePath) =>
-        puppeteer.launch({
-          args: chromium.args,
-          defaultViewport: chromium.defaultViewport,
-          executablePath,
-          headless: chromium.headless,
-        }),
-      );
+      const excautablePath = await chromium.executablePath();
+
+      this.browser = puppeteer.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: excautablePath,
+        headless: chromium.headless,
+      });
     }
 
     return this.browser;
