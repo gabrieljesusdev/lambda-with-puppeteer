@@ -1,0 +1,4 @@
+export type DomainErrorCode =
+  | "BROWSER_INIT_ERROR"
+  | "BROWSER_CLOSE_ERROR"
+  | "REQUEST_INVALID_PARAMS";

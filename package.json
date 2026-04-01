@@ -1,0 +1,23 @@
+{
+  "name": "lambda-puppeteer-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "serverless offline start --httpPort 3000",
+    "deploy": "serverless deploy",
+    "postinstall": "rebrowser-patches patch --packageName puppeteer-core"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "^133.0.0",
+    "puppeteer-core": "24.8.1",
+    "rebrowser-patches": "^1.0.19"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.147",
+    "@types/node": "^22.15.0",
+    "esbuild": "^0.25.0",
+    "serverless": "^4.4.0",
+    "serverless-offline": "^14.4.0",
+    "typescript": "^5.7.0"
+  }
+}
