@@ -100,7 +100,7 @@ Error response examples:
 ```json
 {
 	"error": "An unexpected error occurred",
-  "code": "INTERNAL_SERVER_ERROR"
+	"code": "INTERNAL_SERVER_ERROR"
 }
 ```
 
